@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+* {
+  /* Defaults */
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+  /* Font */
+  --font-family-big-shoulders: 'Big Shoulders Display';
+  --font-family-lexend: 'Lexend Deca';
+
+  /* Colors Primary */
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-green: hsl(179, 100%, 13%);
+
+  /* Colors Neutral */
+  --white-transparant: hsla(0, 0%, 100%, 0.75);
+  --very-light-gray: hsl(0, 0%, 95%);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  position: fixed;
+  bottom: 1rem;
+  left: 0;
+  right: 0;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+body {
+  font-size: 15px;
+  font-family: var(--font-family-big-shoulders);
+  background-color: var(--very-light-gray);
+  padding: 25px;
+  color: white;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.card {
+  flex: 1;
+  padding: 40px;
+  display: flex;
+  justify-content: start;
+  align-items: baseline;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.card--color-yellow {
+  background-color: var(--bright-orange);
+}
+.card--color-yellow button {
+  color: var(--bright-orange);
+}
+
+.card--color-cyan {
+  background-color: var(--dark-cyan);
+}
+.card--color-cyan button {
+  color: var(--dark-cyan);
+}
+
+.card--color-green {
+  background-color: var(--very-green);
+}
+.card--color-green button {
+  color: var(--very-green);
+}
+
+.card__title {
+  text-transform: uppercase;
+}
+
+.card__description {
+  font-family: var(--font-family-lexend);
+  color: var(--white-transparant);
+  line-height: 1.7;
+}
+
+.card__button {
+  border-style: none;
+  background-color: var(--very-light-gray);
+  border-radius: 25px;
+  height: 50px;
+  width: 150px;
+  margin-top: auto;
+}
+
+@media (min-width: 768px) {
+  html,
+  body,
+  main {
+    height: 100%;
+  }
+  main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .flex-container {
+    max-width: 960px;
+    flex-direction: row;
+    /* justify-content: center; */
+    /* align-items: center; */
+  }
+}
